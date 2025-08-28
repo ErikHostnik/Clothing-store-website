@@ -22,26 +22,26 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm border-b sticky top-0 z-50">
+    <header className="bg-gray-50 shadow-sm border-b sticky top-0 z-50">
       <div className="container">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold text-primary">
-            StyleHub
+            Revolution
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
-            <Link to="/shop" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/shop" className="text-gray-300 hover:text-white transition-colors">
               Shop
             </Link>
-            <Link to="/about" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-primary transition-colors">
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
           </nav>
@@ -54,11 +54,11 @@ const Header = () => {
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                className="w-full pl-4 pr-10 py-2 border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-100 text-white"
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
               >
                 <Search size={20} />
               </button>
@@ -69,7 +69,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             {/* User Icon */}
             <button className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
-              <User size={20} className="text-gray-600" />
+              <User size={20} className="text-gray-300" />
             </button>
 
             {/* Cart Icon */}
@@ -77,7 +77,7 @@ const Header = () => {
               to="/cart"
               className="relative flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
             >
-              <ShoppingCart size={20} className="text-gray-600" />
+              <ShoppingCart size={20} className="text-gray-300" />
               {getCartCount() > 0 && (
                 <span className="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {getCartCount()}
@@ -103,11 +103,11 @@ const Header = () => {
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-4 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              className="w-full pl-4 pr-10 py-2 border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-100 text-white"
             />
             <button
               type="submit"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
             >
               <Search size={20} />
             </button>
@@ -121,28 +121,28 @@ const Header = () => {
               <Link
                 to="/"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-600 hover:text-primary transition-colors"
+                className="text-gray-300 hover:text-white transition-colors"
               >
                 Home
               </Link>
               <Link
                 to="/shop"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-600 hover:text-primary transition-colors"
+                className="text-gray-300 hover:text-white transition-colors"
               >
                 Shop
               </Link>
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-600 hover:text-primary transition-colors"
+                className="text-gray-300 hover:text-white transition-colors"
               >
                 About
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-600 hover:text-primary transition-colors"
+                className="text-gray-300 hover:text-white transition-colors"
               >
                 Contact
               </Link>
