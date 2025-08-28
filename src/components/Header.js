@@ -31,36 +31,36 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+          <nav className="hidden md:flex items-center space-x-3">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors nav-link">
               Home
             </Link>
-            <Link to="/shop" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/shop" className="text-gray-300 hover:text-white transition-colors nav-link">
               Shop
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors nav-link">
               About
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors nav-link">
               Contact
             </Link>
           </nav>
 
-          {/* Search Bar */}
-          <div className="hidden md:flex items-center flex-1 max-w-md mx-8">
+          {/* Prominent Search Bar (single instance across all sizes) */}
+          <div className="flex items-center flex-1 max-w-xl mx-4 md:mx-8">
             <form onSubmit={handleSearch} className="relative w-full">
               <input
                 type="text"
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-4 pr-10 py-2 border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-100 text-white"
+                className="w-full pl-5 pr-12 py-3 border border-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-100 text-white shadow-md"
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300 hover:text-white"
               >
-                <Search size={20} />
+                <Search size={22} />
               </button>
             </form>
           </div>
@@ -68,18 +68,18 @@ const Header = () => {
           {/* Right Side Icons */}
           <div className="flex items-center space-x-4">
             {/* User Icon */}
-            <button className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
-              <User size={20} className="text-gray-300" />
+            <button className="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors shadow-md border border-gray-800">
+              <User size={24} className="text-gray-300" />
             </button>
 
             {/* Cart Icon */}
             <Link
               to="/cart"
-              className="relative flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+              className="relative flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors shadow-md border border-gray-800"
             >
-              <ShoppingCart size={20} className="text-gray-300" />
+              <ShoppingCart size={24} className="text-gray-300" />
               {getCartCount() > 0 && (
-                <span className="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full w-6 h-6 flex items-center justify-center shadow-md">
                   {getCartCount()}
                 </span>
               )}
@@ -95,54 +95,36 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Search Bar */}
-        <div className="md:hidden mb-4">
-          <form onSubmit={handleSearch} className="relative">
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-4 pr-10 py-2 border border-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-gray-100 text-white"
-            />
-            <button
-              type="submit"
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
-            >
-              <Search size={20} />
-            </button>
-          </form>
-        </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden border-t py-4">
-            <nav className="flex flex-col space-y-4">
+            <nav className="flex flex-col space-y-2">
               <Link
                 to="/"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors nav-link"
               >
                 Home
               </Link>
               <Link
                 to="/shop"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors nav-link"
               >
                 Shop
               </Link>
               <Link
                 to="/about"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors nav-link"
               >
                 About
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-gray-300 hover:text-white transition-colors"
+                className="text-gray-300 hover:text-white transition-colors nav-link"
               >
                 Contact
               </Link>
