@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300" />
           
@@ -40,13 +40,13 @@ const ProductCard = ({ product }) => {
         </div>
 
         {/* Product Info */}
-        <div className="p-4">
-          <h3 className="font-semibold text-lg mb-2 text-primary group-hover:text-primary-hover transition-colors">
+        <div className="p-6">
+          <h3 className="font-display font-semibold text-2xl mb-2 text-primary group-hover:text-primary-hover transition-colors">
             {product.name}
           </h3>
           
           <div className="flex items-center justify-between mb-2">
-            <span className="text-2xl font-bold text-primary">
+            <span className="text-3xl font-bold text-primary">
               ${product.price}
             </span>
             
@@ -77,7 +77,7 @@ const ProductCard = ({ product }) => {
           </p>
 
           {/* Description */}
-          <p className="text-gray-600 text-sm line-clamp-2">
+          <p className="text-gray-600 text-base line-clamp-2">
             {product.description}
           </p>
 
@@ -85,7 +85,7 @@ const ProductCard = ({ product }) => {
           <button
             onClick={handleAddToCart}
             disabled={!product.inStock}
-            className="w-full mt-4 btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full mt-6 btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {product.inStock ? 'Add to Cart' : 'Out of Stock'}
           </button>
