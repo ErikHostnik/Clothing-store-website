@@ -1,4 +1,4 @@
-# StyleHub - Modern Clothing Store Website
+# Revolution - Modern Clothing Store Website
 
 A modern, responsive clothing store website built with React. Features a complete e-commerce experience with product browsing, shopping cart, and user-friendly interface.
 
